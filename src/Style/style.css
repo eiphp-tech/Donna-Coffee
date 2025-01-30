@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --color-dark-brown: #261e1b;
+  --color-tan: #9b8063;
+  --color-beige: #f5f5dc;
+  --color-white: #ffffff;
+  --color-gray-brown: #383838;
+  --cokor-bone: #e7e1d5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.2s linear;
+}
+
+.infeite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  gap: 0.5rem;
+}
+.infeite .linha-left, .infeite .linha-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 4px;
+}
+.infeite .linha-left .linha01, .infeite .linha-right .linha01, .infeite .linha-left .linha02, .infeite .linha-right .linha02 {
+  height: 1px;
+  width: 40px;
+  background-color: var(--color-dark-brown);
+  border-radius: 50%;
+}
+.infeite .linha-left .linha02, .infeite .linha-right .linha02 {
+  width: 50px;
+}
+.infeite .linha-right {
+  align-items: flex-end;
+}
+.infeite img {
+  height: 20px;
+}
+
+#video-background {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+#video-background video {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#video-background .mascara-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(109deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  pointer-events: none;
+}
+
+.container-geral {
+  margin-left: 16%;
+}
+
+header {
+  position: fixed;
+  background-color: var(--color-gray-brown);
+  width: 16%;
+  height: 100vh;
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.links {
+  height: 40%;
+  width: 100%;
+  margin: 0 0 1rem 0;
+}
+.links ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.links ul li {
+  border: 1px solid #444444;
+  padding: 0.6rem;
+  width: 100%;
+  text-align: center;
+}
+.links ul li a {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Urbanist", serif;
+  font-weight: 700;
+  border-radius: 10px;
+  letter-spacing: 2px;
+}
+.links ul li:hover {
+  border-right: 4px solid var(--color-tan);
+}
+.links ul li:hover a {
+  color: var(--color-tan);
+}
+
+.logo {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+}
+.logo img {
+  height: 90%;
+  background-color: var(--color-whitek-brown);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  gap: 1.1rem;
+}
+.icons a {
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #444444;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  height: 100vh;
+  gap: 2rem;
+}
+#home h1 {
+  color: var(--color-beige);
+  font-family: "Urbanist", serif;
+  font-size: 1.6rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+#home img {
+  height: 320px;
+}
+
+#historia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--cokor-bone);
+}
+#historia figure {
+  width: 50%;
+}
+#historia figure img {
+  width: 100%;
+}
+#historia article {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+#historia article h2 {
+  font-size: 2.4rem;
+  color: var(--color-dark-brown);
+  font-family: "Urbanist", serif;
+  text-transform: capitalize;
+}
+#historia article p {
+  font-family: "Quicksand", serif;
+  color: #444444;
+  width: 80%;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+#menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 4rem 0;
+  gap: 0.4rem;
+}
+#menu h2 {
+  font-size: 2.4rem;
+  color: var(--color-dark-brown);
+  font-family: "Urbanist", serif;
+  text-transform: capitalize;
+}
+#menu .frase {
+  font-family: "Quicksand", serif;
+  color: #444444;
+  width: 50%;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.container-menu {
+  margin: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 4rem;
+}
+
+.container-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.container-item img {
+  height: 100px;
+  border-radius: 50%;
+}
+.container-item .item-descricao {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+}
+.container-item .item-descricao h3 {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  font-size: 16px;
+  margin: 0;
+  gap: 10px;
+  width: 100%;
+  font-family: "Quicksand", serif;
+}
+.container-item .item-descricao h3 .name {
+  white-space: nowrap;
+}
+.container-item .item-descricao h3 .pontinhado {
+  flex-grow: 1;
+  border-bottom: 2px dotted #333333;
+  height: 1px;
+  margin-bottom: 3px;
+}
+.container-item .item-descricao h3 .price {
+  color: #c58a3b;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.container-item .item-descricao .descricao {
+  width: 100%;
+  font-size: 14px;
+}/*# sourceMappingURL=style.css.map */
