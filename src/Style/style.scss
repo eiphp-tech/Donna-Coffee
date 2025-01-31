@@ -258,13 +258,15 @@ header {
   justify-content: center;
   flex-direction: column;
   margin: 4rem 0;
-  gap: .4rem;
+  gap: .6rem;
 
   h2 {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     color: var(--color-dark-brown);
     font-family: "Urbanist", serif;
     text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: -.3rem;
   }
 
   .frase {
@@ -273,7 +275,7 @@ header {
     width: 50%;
     text-align: center;
     font-size: .9rem;
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 
@@ -342,4 +344,31 @@ header {
 
   }
   
+}
+
+#reserva{
+  background-color: var(--cokor-bone);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem 0;
+  gap: .5rem;
+
+  h2 {
+    font-size: 2.6rem;
+    color: var(--color-dark-brown);
+    font-family: "Urbanist", serif;
+    font-weight: 700;
+    margin-bottom: -.3rem;
+  }
+
+  aside {
+    font-family: "Quicksand", serif;
+    color: #444444;
+    width: 50%;
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 600;
+  }
 }
