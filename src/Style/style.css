@@ -1,13 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
-:root {
-  --color-dark-brown: #261e1b;
-  --color-tan: #9b8063;
-  --color-beige: #f5f5dc;
-  --color-white: #ffffff;
-  --color-gray-brown: #383838;
-  --cokor-bone: #e7e1d5;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -38,7 +29,7 @@
 .infeite .linha-left .linha01, .infeite .linha-right .linha01, .infeite .linha-left .linha02, .infeite .linha-right .linha02 {
   height: 1px;
   width: 40px;
-  background-color: var(--color-dark-brown);
+  background-color: #261e1b;
   border-radius: 50%;
 }
 .infeite .linha-left .linha02, .infeite .linha-right .linha02 {
@@ -83,7 +74,7 @@
 
 header {
   position: fixed;
-  background-color: var(--color-gray-brown);
+  background-color: #383838;
   width: 16%;
   height: 100vh;
 }
@@ -117,7 +108,7 @@ header {
   text-align: center;
 }
 .links ul li a {
-  color: var(--color-white);
+  color: #ffffff;
   font-size: 1.2rem;
   font-weight: 500;
   font-family: "Urbanist", serif;
@@ -126,10 +117,10 @@ header {
   letter-spacing: 2px;
 }
 .links ul li:hover {
-  border-right: 4px solid var(--color-tan);
+  border-right: 4px solid #9b8063;
 }
 .links ul li:hover a {
-  color: var(--color-tan);
+  color: #9b8063;
 }
 
 .logo {
@@ -173,7 +164,7 @@ header {
   gap: 2rem;
 }
 #home h1 {
-  color: var(--color-beige);
+  color: #f5f5dc;
   font-family: "Urbanist", serif;
   font-size: 1.6rem;
   text-align: center;
@@ -191,7 +182,8 @@ header {
   justify-content: space-between;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: var(--cokor-bone);
+  background-color: #e7e1d5;
+  flex-wrap: wrap;
 }
 #historia figure {
   width: 50%;
@@ -210,7 +202,7 @@ header {
 }
 #historia article h2 {
   font-size: 2.4rem;
-  color: var(--color-dark-brown);
+  color: #261e1b;
   font-family: "Urbanist", serif;
   text-transform: capitalize;
 }
@@ -233,7 +225,7 @@ header {
 }
 #menu h2 {
   font-size: 2.6rem;
-  color: var(--color-dark-brown);
+  color: #261e1b;
   font-family: "Urbanist", serif;
   text-transform: capitalize;
   font-weight: 700;
@@ -299,22 +291,61 @@ header {
   white-space: nowrap;
 }
 .container-item .item-descricao .descricao {
-  width: 100%;
   font-size: 14px;
+  flex-grow: 1;
+  font-family: "Quicksand", serif;
+  font-weight: 500;
+  color: #383838;
+}
+
+#banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: url("../Assents/img/banner.png") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+#banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.2);
+}
+#banner .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+#banner .content h2 {
+  width: 80%;
+  font-family: "Urbanist", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
 }
 
 #reserva {
-  background-color: var(--cokor-bone);
+  background-color: #e7e1d5;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 4rem 0;
+  padding: 4rem 0 4rem;
   gap: 0.5rem;
+  overflow: hidden;
+  position: relative;
 }
 #reserva h2 {
   font-size: 2.6rem;
-  color: var(--color-dark-brown);
+  color: #261e1b;
   font-family: "Urbanist", serif;
   font-weight: 700;
   margin-bottom: -0.3rem;
@@ -326,4 +357,115 @@ header {
   text-align: center;
   font-size: 0.9rem;
   font-weight: 600;
+  margin-bottom: 3.5rem;
+}
+#reserva .container-form {
+  width: 100%;
+  max-width: 700px;
+}
+#reserva .container-form form {
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+#reserva .container-form .grupo-input {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 70%;
+}
+#reserva .container-form .grupo-input input,
+#reserva .container-form .grupo-input select {
+  background: none;
+  padding: 10px;
+  border: 1px solid #261e1b;
+  border-radius: 2px;
+  font-size: 14px;
+}
+#reserva .container-form .grupo-input input ::-moz-placeholder, #reserva .container-form .grupo-input select ::-moz-placeholder {
+  color: #261e1b;
+  opacity: 1;
+}
+#reserva .container-form .grupo-input input ::placeholder,
+#reserva .container-form .grupo-input select ::placeholder {
+  color: #261e1b;
+  opacity: 1;
+}
+#reserva .container-form .grupo-input input::-moz-placeholder {
+  color: #261e1b;
+  opacity: 1;
+  font-family: "Urbanist", serif;
+  font-weight: 600;
+}
+#reserva .container-form .grupo-input input::placeholder {
+  color: #261e1b;
+  opacity: 1;
+  font-family: "Urbanist", serif;
+  font-weight: 600;
+}
+#reserva .container-form .grupo-input option {
+  background-color: #e7e1d5;
+  color: #261e1b;
+}
+#reserva .container-form textarea {
+  background: none;
+  padding: 10px;
+  border: 1px solid #261e1b;
+  border-radius: 2px;
+  min-height: 100px;
+  width: 70%;
+  resize: none;
+}
+#reserva .container-form textarea::-moz-placeholder {
+  color: #261e1b;
+  opacity: 1;
+  font-family: "Urbanist", serif;
+  font-weight: 600;
+}
+#reserva .container-form textarea::placeholder {
+  color: #261e1b;
+  opacity: 1;
+  font-family: "Urbanist", serif;
+  font-weight: 600;
+}
+#reserva .container-form button {
+  background: #9b8063;
+  color: white;
+  font-family: "Urbanist", serif;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding: 12px 15px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 1rem;
+}
+#reserva .container-form button:hover {
+  background: #ac9073;
+}
+#reserva .mancha-de-cafe01 {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  z-index: 0;
+}
+#reserva .mancha-de-cafe01 img {
+  height: 310px;
+}
+#reserva .mancha-de-cafe02 {
+  position: absolute;
+  bottom: -12rem;
+  left: -4rem;
+  z-index: 0;
+  overflow: hidden;
+}
+#reserva .mancha-de-cafe02 img {
+  height: 440px;
 }/*# sourceMappingURL=style.css.map */
