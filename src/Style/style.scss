@@ -12,6 +12,17 @@ $button-hover: #ac9073;
 $font-title: "Urbanist", serif;
 $font-text: "Quicksand", serif;
 
+// screen sizes min-width
+$screen-cell-min: 320px;
+$screen-tablet-min: 550px;
+$screen-desktop-min: 1021px;
+$screen-xl-min: 1440px;
+
+// screen sizes max-width
+$screen-cell-max: 549px;
+$screen-tablet-max: 1020px;
+$screen-desktop-max: 1439px;
+
 * {
   margin: 0;
   padding: 0;
@@ -49,7 +60,6 @@ $font-text: "Quicksand", serif;
     .linha02 {
       @extend .linha01;
       width: 50px;
-
     }
   }
 
@@ -94,12 +104,15 @@ $font-text: "Quicksand", serif;
   margin-left: 16%;
 }
 
-
 header {
   position: fixed;
   background-color: $color-gray-brown;
   width: 16%;
   height: 100vh;
+
+  .ham-menu {
+    display: none;
+  }
 }
 
 .container-header {
@@ -147,11 +160,9 @@ header {
           color: $color-tan;
         }
       }
-
     }
   }
 }
-
 
 .logo {
   height: 200px;
@@ -232,14 +243,13 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: .6rem;
+    gap: 0.6rem;
 
     h2 {
       font-size: 2.4rem;
       color: $color-dark-brown;
       font-family: "Urbanist", serif;
       text-transform: capitalize;
-
     }
 
     p {
@@ -251,7 +261,6 @@ header {
       font-weight: 500;
     }
   }
-
 }
 
 #menu {
@@ -260,7 +269,7 @@ header {
   justify-content: center;
   flex-direction: column;
   margin: 4rem 0;
-  gap: .6rem;
+  gap: 0.6rem;
 
   h2 {
     font-size: 2.6rem;
@@ -268,7 +277,7 @@ header {
     font-family: "Urbanist", serif;
     text-transform: capitalize;
     font-weight: 700;
-    margin-bottom: -.3rem;
+    margin-bottom: -0.3rem;
   }
 
   .frase {
@@ -276,7 +285,7 @@ header {
     color: #444444;
     width: 50%;
     text-align: center;
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 600;
   }
 }
@@ -295,7 +304,6 @@ header {
   align-items: center;
   justify-content: center;
   gap: 10px;
-
 
   img {
     height: 100px;
@@ -335,7 +343,6 @@ header {
         font-weight: bold;
         white-space: nowrap;
       }
-
     }
 
     .descricao {
@@ -345,17 +352,14 @@ header {
       font-weight: 500;
       color: $color-gray-brown;
     }
-
-
   }
-
 }
 
 #banner {
   position: relative;
   width: 100%;
   height: 300px;
-  background: url('../Assents/img/banner.png') no-repeat center center/cover;
+  background: url("../Assents/img/banner.png") no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -374,16 +378,17 @@ header {
   .content {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     z-index: 2;
+    margin: 0 2rem;
 
     h2 {
-      width: 80%;
+      width: 70%;
       font-family: $font-title;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       font-weight: 700;
       line-height: 1.4;
-      letter-spacing: .5px;
+      letter-spacing: 0.5px;
     }
   }
 }
@@ -395,7 +400,7 @@ header {
   justify-content: center;
   flex-direction: column;
   padding: 4rem 0 4rem;
-  gap: .5rem;
+  gap: 0.5rem;
   overflow: hidden;
   position: relative;
 
@@ -404,7 +409,7 @@ header {
     color: $color-dark-brown;
     font-family: "Urbanist", serif;
     font-weight: 700;
-    margin-bottom: -.3rem;
+    margin-bottom: -0.3rem;
   }
 
   aside {
@@ -412,7 +417,7 @@ header {
     color: #444444;
     width: 50%;
     text-align: center;
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 3.5rem;
   }
@@ -485,7 +490,7 @@ header {
       color: white;
       font-family: "Urbanist", serif;
       text-transform: uppercase;
-      font-size: .9rem;
+      font-size: 0.9rem;
       font-weight: 800;
       padding: 12px 15px;
       width: fit-content;
@@ -499,8 +504,6 @@ header {
         background: $button-hover;
       }
     }
-
-
   }
 
   .mancha-de-cafe01 {
@@ -524,7 +527,197 @@ header {
     img {
       height: 440px;
     }
-
   }
 }
 
+@media (min-width: $screen-cell-min) and (max-width: $screen-cell-max) {
+  .container-geral {
+    margin-left: 0;
+  }
+
+  header {
+    width: 100%;
+    height: 50px;
+
+    .ham-menu {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.3rem;
+      transition: 2s ease-in-out;
+      top: 1rem;
+      left: 0;
+      margin: 0 20px;
+
+      span {
+        width: 20px;
+        background-color: $color-white;
+        height: 2px;
+      }
+
+      &:active {
+        span {
+          width: 5px;
+        }
+      }
+    }
+    .container-header {
+      display: none;
+      align-items: center;
+      padding: 4rem 0;
+      background-color: $color-gray-brown;
+      height: 100vh;
+
+      .links {
+        width: 100%;
+        height: 100vh;
+      }
+
+      .logo {
+        display: block;
+        margin-top: 2rem;
+        img {
+          height: 200px;
+        }
+      }
+
+      .icons {
+        width: fit-content;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  #video-background {
+    display: none;
+  }
+
+  #home {
+    background-color: $color-dark-brown;
+    height: 70vh;
+    h1 {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    img {
+      height: 300px;
+    }
+  }
+
+  #historia {
+    gap: 1rem;
+
+    figure {
+      width: 100%;
+    }
+
+    article {
+      width: 100%;
+      padding-bottom: 2rem;
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  #menu {
+    margin: 2rem 0;
+    h2 {
+      font-size: 2rem;
+    }
+
+    .frase {
+      width: 80%;
+      font-size: 0.8rem;
+    }
+
+    .container-menu {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      padding: 0 2rem;
+
+      .descricao {
+        font-size: 12px;
+      }
+    }
+  }
+
+  #banner {
+    height: 200px;
+    width: 100%;
+    background: url("../Assents/img/banner.png") no-repeat center left/cover;
+
+    .content {
+      h2 {
+        text-align: right;
+        width: 80%;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  #reserva {
+    padding: 2rem 0 2rem;
+
+    .mancha-de-cafe01{
+      top: 5rem;
+      right: -4rem;
+      img{
+        height: 150px;
+      }
+    }
+
+    .mancha-de-cafe02{
+      bottom: -8.2rem;
+      left: -3rem;
+      img{
+        height: 300px;
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    aside {
+      width: 70%;
+      font-size: 0.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .container-form {
+      form {
+        padding: 10px;
+      }
+
+      .grupo-input {
+        width: 80%;
+
+        input,
+        select {
+          padding: 8px;
+          font-size: 12px;
+          width: 100%;
+        }
+      }
+
+      textarea {
+        padding: 8px;
+        font-size: 12px;
+        width: 80%;
+      }
+
+      button {
+        font-size: 0.8rem;
+        padding: 10px 12px;
+      }
+    }
+  }
+}

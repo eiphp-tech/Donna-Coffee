@@ -78,6 +78,9 @@ header {
   width: 16%;
   height: 100vh;
 }
+header .ham-menu {
+  display: none;
+}
 
 .container-header {
   display: flex;
@@ -320,13 +323,14 @@ header {
 #banner .content {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   z-index: 2;
+  margin: 0 2rem;
 }
 #banner .content h2 {
-  width: 80%;
+  width: 70%;
   font-family: "Urbanist", serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: 0.5px;
@@ -468,4 +472,161 @@ header {
 }
 #reserva .mancha-de-cafe02 img {
   height: 440px;
+}
+
+@media (min-width: 320px) and (max-width: 549px) {
+  .container-geral {
+    margin-left: 0;
+  }
+  header {
+    width: 100%;
+    height: 50px;
+  }
+  header .ham-menu {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.3rem;
+    transition: 2s ease-in-out;
+    top: 1rem;
+    left: 0;
+    margin: 0 20px;
+  }
+  header .ham-menu span {
+    width: 20px;
+    background-color: #ffffff;
+    height: 2px;
+  }
+  header .ham-menu:active span {
+    width: 5px;
+  }
+  header .container-header {
+    display: none;
+    align-items: center;
+    padding: 4rem 0;
+    background-color: #383838;
+    height: 100vh;
+  }
+  header .container-header .links {
+    width: 100%;
+    height: 100vh;
+  }
+  header .container-header .logo {
+    display: block;
+    margin-top: 2rem;
+  }
+  header .container-header .logo img {
+    height: 200px;
+  }
+  header .container-header .icons {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 2rem;
+  }
+  #video-background {
+    display: none;
+  }
+  #home {
+    background-color: #261e1b;
+    height: 70vh;
+  }
+  #home h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  #home img {
+    height: 300px;
+  }
+  #historia {
+    gap: 1rem;
+  }
+  #historia figure {
+    width: 100%;
+  }
+  #historia article {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+  #historia article h2 {
+    font-size: 2rem;
+  }
+  #historia article p {
+    font-size: 1.1rem;
+  }
+  #menu {
+    margin: 2rem 0;
+  }
+  #menu h2 {
+    font-size: 2rem;
+  }
+  #menu .frase {
+    width: 80%;
+    font-size: 0.8rem;
+  }
+  #menu .container-menu {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 0 2rem;
+  }
+  #menu .container-menu .descricao {
+    font-size: 12px;
+  }
+  #banner {
+    height: 200px;
+    width: 100%;
+    background: url("../Assents/img/banner.png") no-repeat center left/cover;
+  }
+  #banner .content h2 {
+    text-align: right;
+    width: 80%;
+    font-size: 1.2rem;
+  }
+  #reserva {
+    padding: 2rem 0 2rem;
+  }
+  #reserva .mancha-de-cafe01 {
+    top: 5rem;
+    right: -4rem;
+  }
+  #reserva .mancha-de-cafe01 img {
+    height: 150px;
+  }
+  #reserva .mancha-de-cafe02 {
+    bottom: -8.2rem;
+    left: -3rem;
+  }
+  #reserva .mancha-de-cafe02 img {
+    height: 300px;
+  }
+  #reserva h2 {
+    font-size: 2rem;
+  }
+  #reserva aside {
+    width: 70%;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  #reserva .container-form form {
+    padding: 10px;
+  }
+  #reserva .container-form .grupo-input {
+    width: 80%;
+  }
+  #reserva .container-form .grupo-input input,
+  #reserva .container-form .grupo-input select {
+    padding: 8px;
+    font-size: 12px;
+    width: 100%;
+  }
+  #reserva .container-form textarea {
+    padding: 8px;
+    font-size: 12px;
+    width: 80%;
+  }
+  #reserva .container-form button {
+    font-size: 0.8rem;
+    padding: 10px 12px;
+  }
 }/*# sourceMappingURL=style.css.map */
