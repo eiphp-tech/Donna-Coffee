@@ -173,7 +173,7 @@ header .ham-menu {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 500;
+  font-weight: 800;
 }
 #home img {
   height: 320px;
@@ -231,7 +231,7 @@ header .ham-menu {
   color: #261e1b;
   font-family: "Urbanist", serif;
   text-transform: capitalize;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: -0.3rem;
 }
 #menu .frase {
@@ -331,7 +331,7 @@ header .ham-menu {
   width: 70%;
   font-family: "Urbanist", serif;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.4;
   letter-spacing: 0.5px;
 }
@@ -351,7 +351,7 @@ header .ham-menu {
   font-size: 2.6rem;
   color: #261e1b;
   font-family: "Urbanist", serif;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: -0.3rem;
 }
 #reserva aside {
@@ -474,6 +474,94 @@ header .ham-menu {
   height: 440px;
 }
 
+#feedback-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 0 0 2rem;
+  gap: 0.4rem;
+}
+#feedback-container h2 {
+  font-size: 2.6rem;
+  color: #261e1b;
+  font-family: "Urbanist", serif;
+  font-weight: 800;
+}
+#feedback-container aside {
+  font-family: "Quicksand", serif;
+  color: #444444;
+  width: 50%;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+#feedback-container .testemunha-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+#feedback-container .testemunha-slide .nav-botao {
+  background: #ac9073;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+#feedback-container .testemunha-slide .nav-botao span {
+  font-size: 20px;
+  color: #261e1b;
+}
+#feedback-container .testemunha-slide .testemunhas {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  width: 70%;
+}
+#feedback-container .testemunha-slide .testemunhas .testemunha {
+  position: relative;
+  flex: 1;
+  padding: 20px;
+  background: #e7e1d5;
+  border-radius: 20px;
+  text-align: left;
+}
+#feedback-container .testemunha-slide .testemunhas .testemunha p {
+  font-size: 14px;
+  color: #261e1b;
+  font-family: "Quicksand", serif;
+  font-weight: 600;
+}
+#feedback-container .testemunha-slide .testemunhas .testemunha strong {
+  display: block;
+  margin-top: 10px;
+  color: black;
+  font-size: 13px;
+  font-family: "Urbanist", serif;
+}
+#feedback-container .testemunha-slide .testemunhas .testemunha img {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  z-index: 1;
+  opacity: 0.1;
+}
+
+.imagens {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+.imagens figure {
+  height: 100%;
+}
+.imagens figure img {
+  height: 200px;
+}
+
 @media (min-width: 320px) and (max-width: 549px) {
   .container-geral {
     margin-left: 0;
@@ -535,6 +623,7 @@ header .ham-menu {
   #home h1 {
     font-size: 1.2rem;
     font-weight: 700;
+    width: 90%;
   }
   #home img {
     height: 300px;

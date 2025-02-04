@@ -212,7 +212,7 @@ header {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 500;
+    font-weight: 800;
   }
 
   img {
@@ -276,7 +276,7 @@ header {
     color: $color-dark-brown;
     font-family: "Urbanist", serif;
     text-transform: capitalize;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: -0.3rem;
   }
 
@@ -386,7 +386,7 @@ header {
       width: 70%;
       font-family: $font-title;
       font-size: 1.8rem;
-      font-weight: 700;
+      font-weight: 800;
       line-height: 1.4;
       letter-spacing: 0.5px;
     }
@@ -408,7 +408,7 @@ header {
     font-size: 2.6rem;
     color: $color-dark-brown;
     font-family: "Urbanist", serif;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: -0.3rem;
   }
 
@@ -530,194 +530,303 @@ header {
   }
 }
 
-@media (min-width: $screen-cell-min) and (max-width: $screen-cell-max) {
-  .container-geral {
-    margin-left: 0;
+#feedback-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 0 0 2rem;
+  gap: 0.4rem;
+
+  h2 {
+    font-size: 2.6rem;
+    color: $color-dark-brown;
+    font-family: "Urbanist", serif;
+    font-weight: 800;
   }
 
-  header {
-    width: 100%;
-    height: 50px;
-
-    .ham-menu {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 0.3rem;
-      transition: 2s ease-in-out;
-      top: 1rem;
-      left: 0;
-      margin: 0 20px;
-
-      span {
-        width: 20px;
-        background-color: $color-white;
-        height: 2px;
-      }
-
-      &:active {
-        span {
-          width: 5px;
-        }
-      }
-    }
-    .container-header {
-      display: none;
-      align-items: center;
-      padding: 4rem 0;
-      background-color: $color-gray-brown;
-      height: 100vh;
-
-      .links {
-        width: 100%;
-        height: 100vh;
-      }
-
-      .logo {
-        display: block;
-        margin-top: 2rem;
-        img {
-          height: 200px;
-        }
-      }
-
-      .icons {
-        width: fit-content;
-        margin-bottom: 2rem;
-      }
-    }
+  aside {
+    font-family: "Quicksand", serif;
+    color: #444444;
+    width: 50%;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
   }
 
-  #video-background {
-    display: none;
-  }
-
-  #home {
-    background-color: $color-dark-brown;
-    height: 70vh;
-    h1 {
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-
-    img {
-      height: 300px;
-    }
-  }
-
-  #historia {
+  .testemunha-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
 
-    figure {
-      width: 100%;
-    }
+    .nav-botao {
+      background: $button-hover;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 5px 10px;
 
-    article {
-      width: 100%;
-      padding-bottom: 2rem;
-      h2 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1.1rem;
+      span {
+        font-size: 20px;
+        color: $color-dark-brown;
       }
     }
+
+    .testemunhas {
+      display: flex;
+      gap: 20px;
+      overflow: hidden;
+      width: 70%;
+
+      .testemunha {
+        position: relative;
+        flex: 1;
+        padding: 20px;
+        background: $color-bone;
+        border-radius: 20px;
+        text-align: left;
+
+        p {
+          font-size: 14px;
+          color: $color-dark-brown;
+          font-family: "Quicksand", serif;
+          font-weight: 600;
+        }
+
+        strong {
+          display: block;
+          margin-top: 10px;
+          color: black;
+          font-size: 13px;
+          font-family: "Urbanist", serif;
+        }
+
+        img {
+          position: absolute;
+          right: 20px;
+          bottom: 10px;
+          z-index: 1;
+          opacity: .1;
+        }
+      }
+    }
+
   }
 
-  #menu {
-    margin: 2rem 0;
-    h2 {
-      font-size: 2rem;
-    }
+} 
 
-    .frase {
-      width: 80%;
-      font-size: 0.8rem;
-    }
-
-    .container-menu {
-      grid-template-columns: 1fr;
-      gap: 1.2rem;
-      padding: 0 2rem;
-
-      .descricao {
-        font-size: 12px;
-      }
+.imagens{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+  figure{
+    height: 100%;
+    
+    img {
+      height: 200px;
     }
   }
+}
 
-  #banner {
-    height: 200px;
-    width: 100%;
-    background: url("../Assents/img/banner.png") no-repeat center left/cover;
+  @media (min-width: $screen-cell-min) and (max-width: $screen-cell-max) {
+    .container-geral {
+      margin-left: 0;
+    }
 
-    .content {
-      h2 {
-        text-align: right;
-        width: 80%;
+    header {
+      width: 100%;
+      height: 50px;
+
+      .ham-menu {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.3rem;
+        transition: 2s ease-in-out;
+        top: 1rem;
+        left: 0;
+        margin: 0 20px;
+
+        span {
+          width: 20px;
+          background-color: $color-white;
+          height: 2px;
+        }
+
+        &:active {
+          span {
+            width: 5px;
+          }
+        }
+      }
+
+      .container-header {
+        display: none;
+        align-items: center;
+        padding: 4rem 0;
+        background-color: $color-gray-brown;
+        height: 100vh;
+
+        .links {
+          width: 100%;
+          height: 100vh;
+        }
+
+        .logo {
+          display: block;
+          margin-top: 2rem;
+
+          img {
+            height: 200px;
+          }
+        }
+
+        .icons {
+          width: fit-content;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    #video-background {
+      display: none;
+    }
+
+    #home {
+      background-color: $color-dark-brown;
+      height: 70vh;
+
+      h1 {
         font-size: 1.2rem;
+        font-weight: 700;
+        width: 90%;
       }
-    }
-  }
 
-  #reserva {
-    padding: 2rem 0 2rem;
-
-    .mancha-de-cafe01{
-      top: 5rem;
-      right: -4rem;
-      img{
-        height: 150px;
-      }
-    }
-
-    .mancha-de-cafe02{
-      bottom: -8.2rem;
-      left: -3rem;
-      img{
+      img {
         height: 300px;
       }
     }
 
-    h2 {
-      font-size: 2rem;
-    }
+    #historia {
+      gap: 1rem;
 
-    aside {
-      width: 70%;
-      font-size: 0.8rem;
-      margin-bottom: 2rem;
-    }
-
-    .container-form {
-      form {
-        padding: 10px;
+      figure {
+        width: 100%;
       }
 
-      .grupo-input {
-        width: 80%;
+      article {
+        width: 100%;
+        padding-bottom: 2rem;
 
-        input,
-        select {
-          padding: 8px;
+        h2 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    #menu {
+      margin: 2rem 0;
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .frase {
+        width: 80%;
+        font-size: 0.8rem;
+      }
+
+      .container-menu {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        padding: 0 2rem;
+
+        .descricao {
           font-size: 12px;
-          width: 100%;
+        }
+      }
+    }
+
+    #banner {
+      height: 200px;
+      width: 100%;
+      background: url("../Assents/img/banner.png") no-repeat center left/cover;
+
+      .content {
+        h2 {
+          text-align: right;
+          width: 80%;
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    #reserva {
+      padding: 2rem 0 2rem;
+
+      .mancha-de-cafe01 {
+        top: 5rem;
+        right: -4rem;
+
+        img {
+          height: 150px;
         }
       }
 
-      textarea {
-        padding: 8px;
-        font-size: 12px;
-        width: 80%;
+      .mancha-de-cafe02 {
+        bottom: -8.2rem;
+        left: -3rem;
+
+        img {
+          height: 300px;
+        }
       }
 
-      button {
+      h2 {
+        font-size: 2rem;
+      }
+
+      aside {
+        width: 70%;
         font-size: 0.8rem;
-        padding: 10px 12px;
+        margin-bottom: 2rem;
+      }
+
+      .container-form {
+        form {
+          padding: 10px;
+        }
+
+        .grupo-input {
+          width: 80%;
+
+          input,
+          select {
+            padding: 8px;
+            font-size: 12px;
+            width: 100%;
+          }
+        }
+
+        textarea {
+          padding: 8px;
+          font-size: 12px;
+          width: 80%;
+        }
+
+        button {
+          font-size: 0.8rem;
+          padding: 10px 12px;
+        }
       }
     }
   }
-}
